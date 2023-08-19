@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FunctionalBank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+</head>
+
+<body class="bg-blue-100 my-50 mx-auto">
+    <header>
+        <h1 class="text-5xl text-center font-bold text-lime-400 capitalize m-5">my balance
+        </h1>
+    </header>
+    <main>
+        <!-- dashboard summary -->
+        <section class="mt-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 font-medium text-2xl text-white w-3/4 mx-auto">
+                <div class="bg-green-400 p-10 rounded-lg">
+                    <h4>Deposit</h4>
+                    <h2 class="text-5xl">$<span id="deposit-total">00</span></h2>
+                </div>
+                <div class="bg-rose-400 p-10 rounded-lg">
+                    <h4>Withdraw</h4>
+                    <h2 class="text-5xl">$<span id="withdraw-total">00</span></h2>
+                </div>
+                <div class="bg-violet-400 p-10 rounded-lg">
+                    <h4>Balance</h4>
+                    <h2 class="text-5xl">$<span id="balance-total">1000</span></h2>
+                </div>
+            </div>
+        </section>
+        <!-- input fields -->
+
+        <section class="my-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-medium text-2xl w-3/4 mx-auto">
+                <div class="bg-lime-500 p-10 rounded-lg">
+                    <h4 class="text-white">Deposit money</h4>
+                    <input type="text" id="deposit-input" class="block p-2 rounded-lg my-8 w-3/4">
+                    <button id="btn-deposit" onclick="depositButton()"
+                        class="py-2 px-6 text-lg bg-green-400 rounded-lg hover:bg-green-700 text-white">Deposit</button>
+                </div>
+                <div class="bg-red-300 p-10 rounded-lg">
+                    <h4 class="text-white">Withdraw Money</h4>
+                    <input type="text" id="withdraw-input" class="block p-2 rounded-lg my-8 w-3/4">
+                    <button id="btn-withdraw" onclick="withdrawButton()"
+                        class="py-2 px-6 text-lg bg-rose-400 rounded-lg hover:bg-red-700 text-white">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
